@@ -3,10 +3,12 @@ package service;
 import model.Food;
 
 public class ShoppingCart {
-    Food[] purchases;
+    private Food[] purchases;
+
     public ShoppingCart(Food[] purchases) {
         this.purchases = purchases;
     }
+
     public double getSumWithoutDiscount() {
         double sumWithoutDiscount = 0;
         for (int i = 0; i < purchases.length; i++) {
@@ -14,6 +16,7 @@ public class ShoppingCart {
         }
         return sumWithoutDiscount;
     }
+
     public double getSumWithDiscount() {
         double sum = 0;
         double sumWithDiscount = 0;
